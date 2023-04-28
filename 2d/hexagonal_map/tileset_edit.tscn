@@ -1,31 +1,103 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://tiles/WWT-01.png" type="Texture" id=1]
-[ext_resource path="res://tiles/WWT-02.png" type="Texture" id=2]
-[ext_resource path="res://tiles/WWT-03.png" type="Texture" id=3]
-[ext_resource path="res://tiles/WWT-04.png" type="Texture" id=4]
-[ext_resource path="res://tiles/WWT-05.png" type="Texture" id=5]
-[ext_resource path="res://tiles/WWT-06.png" type="Texture" id=6]
-[ext_resource path="res://tiles/WWT-07.png" type="Texture" id=7]
-[ext_resource path="res://tiles/WWT-08.png" type="Texture" id=8]
-[ext_resource path="res://tiles/WWT-09.png" type="Texture" id=9]
-[ext_resource path="res://tiles/WWT-10.png" type="Texture" id=10]
-[ext_resource path="res://tiles/WWT-11.png" type="Texture" id=11]
-[ext_resource path="res://tiles/WWT-12.png" type="Texture" id=12]
-[ext_resource path="res://tiles/WWT-13.png" type="Texture" id=13]
-[ext_resource path="res://tiles/WWT-14.png" type="Texture" id=14]
-[ext_resource path="res://tiles/WWT-15.png" type="Texture" id=15]
-[ext_resource path="res://tiles/WWT-16.png" type="Texture" id=16]
-[ext_resource path="res://tiles/WWT-17.png" type="Texture" id=17]
-[ext_resource path="res://tiles/WWT-18.png" type="Texture" id=18]
-[ext_resource path="res://tiles/WWT-19.png" type="Texture" id=19]
-[ext_resource path="res://tiles/WWT-20.png" type="Texture" id=20]
-[ext_resource path="res://tiles/WWT-21.png" type="Texture" id=21]
-[ext_resource path="res://tiles/WWT-22.png" type="Texture" id=22]
-[ext_resource path="res://tiles/WWT-23.png" type="Texture" id=23]
-[ext_resource path="res://tiles/WWT-24.png" type="Texture" id=24]
-[ext_resource path="res://tiles/WWT-25.png" type="Texture" id=25]
-[ext_resource path="res://tiles/WWT-26.png" type="Texture" id=26]
+[ext_resource path="res://tiles/tile_grass_1.png" type="Texture" id=1]
+[ext_resource path="res://tiles/tile_grass_2.png" type="Texture" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/WWT-03.png-111a68b27c5234ed5719f8591af32a0c.stex"
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/WWT-04.png-f26081179f39965c61294d932b10ab21.stex"
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/WWT-05.png-744e3aac04e57d14153c9ab15d0f478b.stex"
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/WWT-06.png-42fd05901daa928f55c39f581f1c698b.stex"
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/WWT-07.png-8e87a5146f132f36aecf29c26d16ff69.stex"
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/WWT-08.png-9ab3b0ed6304c6b282e0c1c2866f4c65.stex"
+
+[sub_resource type="StreamTexture" id=7]
+flags = 4
+load_path = "res://.import/WWT-09.png-c899d1db7b10c4bc6e5c8ad44627c439.stex"
+
+[sub_resource type="StreamTexture" id=8]
+flags = 4
+load_path = "res://.import/WWT-10.png-c7e17e1ca741da0752bae015501fa73f.stex"
+
+[sub_resource type="StreamTexture" id=9]
+flags = 4
+load_path = "res://.import/WWT-11.png-109af6474e89a87a4598cb99f608a4f7.stex"
+
+[sub_resource type="StreamTexture" id=10]
+flags = 4
+load_path = "res://.import/WWT-12.png-dfbf3da77ce636a3e88f9e62405a950b.stex"
+
+[sub_resource type="StreamTexture" id=11]
+flags = 4
+load_path = "res://.import/WWT-13.png-cef8d6fe42386e917ad3aa9b9c54f031.stex"
+
+[sub_resource type="StreamTexture" id=12]
+flags = 4
+load_path = "res://.import/WWT-14.png-b9075987807eba6a461b896e310a1b8a.stex"
+
+[sub_resource type="StreamTexture" id=13]
+flags = 4
+load_path = "res://.import/WWT-15.png-00500699e949fc7109f5946f459a9877.stex"
+
+[sub_resource type="StreamTexture" id=14]
+flags = 4
+load_path = "res://.import/WWT-16.png-fbcd640a627612e528382718aecef7c7.stex"
+
+[sub_resource type="StreamTexture" id=15]
+flags = 4
+load_path = "res://.import/WWT-17.png-eb18073021ced526bfb8971a84830c46.stex"
+
+[sub_resource type="StreamTexture" id=16]
+flags = 4
+load_path = "res://.import/WWT-18.png-82273bf41643f8f544a05cdc2226c3b8.stex"
+
+[sub_resource type="StreamTexture" id=17]
+flags = 4
+load_path = "res://.import/WWT-19.png-5894de00e931e36aaec31583c3ddce5c.stex"
+
+[sub_resource type="StreamTexture" id=18]
+flags = 4
+load_path = "res://.import/WWT-20.png-88080834968c597a14e2fa47d72452ca.stex"
+
+[sub_resource type="StreamTexture" id=19]
+flags = 4
+load_path = "res://.import/WWT-21.png-390238468871139dc33ef039ad919c91.stex"
+
+[sub_resource type="StreamTexture" id=20]
+flags = 4
+load_path = "res://.import/WWT-22.png-61b6f2ffc488560cd737af0df3a2aff4.stex"
+
+[sub_resource type="StreamTexture" id=21]
+flags = 4
+load_path = "res://.import/WWT-23.png-67ddb05725964560ee768025fb1ace6c.stex"
+
+[sub_resource type="StreamTexture" id=22]
+flags = 4
+load_path = "res://.import/WWT-24.png-f708ede817cd745747bd03a5050d20d7.stex"
+
+[sub_resource type="StreamTexture" id=23]
+flags = 4
+load_path = "res://.import/WWT-25.png-8d42552ab8c27a7d4782e3da8de397f1.stex"
+
+[sub_resource type="StreamTexture" id=24]
+flags = 4
+load_path = "res://.import/WWT-26.png-317f2102fb6abd09801389544f53c0e1.stex"
 
 [node name="TilesetEdit" type="Node2D"]
 
@@ -40,120 +112,120 @@ centered = false
 
 [node name="Tile3" type="Sprite" parent="."]
 position = Vector2( 256, 0 )
-texture = ExtResource( 3 )
+texture = SubResource( 1 )
 centered = false
 
 [node name="Tile4" type="Sprite" parent="."]
 position = Vector2( 384, 0 )
-texture = ExtResource( 4 )
+texture = SubResource( 2 )
 centered = false
 
 [node name="Tile5" type="Sprite" parent="."]
 position = Vector2( 512, 0 )
-texture = ExtResource( 5 )
+texture = SubResource( 3 )
 centered = false
 
 [node name="Tile6" type="Sprite" parent="."]
 position = Vector2( 640, 0 )
-texture = ExtResource( 6 )
+texture = SubResource( 4 )
 centered = false
 
 [node name="Tile7" type="Sprite" parent="."]
 position = Vector2( 768, 0 )
-texture = ExtResource( 7 )
+texture = SubResource( 5 )
 centered = false
 
 [node name="Tile8" type="Sprite" parent="."]
 position = Vector2( 896, 0 )
-texture = ExtResource( 8 )
+texture = SubResource( 6 )
 centered = false
 
 [node name="Tile9" type="Sprite" parent="."]
 position = Vector2( 1024, 0 )
-texture = ExtResource( 9 )
+texture = SubResource( 7 )
 centered = false
 
 [node name="Tile10" type="Sprite" parent="."]
 position = Vector2( 0, 128 )
-texture = ExtResource( 10 )
+texture = SubResource( 8 )
 centered = false
 
 [node name="Tile11" type="Sprite" parent="."]
 position = Vector2( 128, 128 )
-texture = ExtResource( 11 )
+texture = SubResource( 9 )
 centered = false
 
 [node name="Tile12" type="Sprite" parent="."]
 position = Vector2( 256, 128 )
-texture = ExtResource( 12 )
+texture = SubResource( 10 )
 centered = false
 
 [node name="Tile13" type="Sprite" parent="."]
 position = Vector2( 384, 128 )
-texture = ExtResource( 13 )
+texture = SubResource( 11 )
 centered = false
 
 [node name="Tile14" type="Sprite" parent="."]
 position = Vector2( 512, 128 )
-texture = ExtResource( 14 )
+texture = SubResource( 12 )
 centered = false
 
 [node name="Tile15" type="Sprite" parent="."]
 position = Vector2( 640, 128 )
-texture = ExtResource( 15 )
+texture = SubResource( 13 )
 centered = false
 
 [node name="Tile16" type="Sprite" parent="."]
 position = Vector2( 768, 128 )
-texture = ExtResource( 16 )
+texture = SubResource( 14 )
 centered = false
 
 [node name="Tile17" type="Sprite" parent="."]
 position = Vector2( 896, 128 )
-texture = ExtResource( 17 )
+texture = SubResource( 15 )
 centered = false
 
 [node name="Tile18" type="Sprite" parent="."]
 position = Vector2( 1024, 128 )
-texture = ExtResource( 18 )
+texture = SubResource( 16 )
 centered = false
 
 [node name="Tile19" type="Sprite" parent="."]
 position = Vector2( 0, 256 )
-texture = ExtResource( 19 )
+texture = SubResource( 17 )
 centered = false
 
 [node name="Tile20" type="Sprite" parent="."]
 position = Vector2( 128, 256 )
-texture = ExtResource( 20 )
+texture = SubResource( 18 )
 centered = false
 
 [node name="Tile21" type="Sprite" parent="."]
 position = Vector2( 256, 256 )
-texture = ExtResource( 21 )
+texture = SubResource( 19 )
 centered = false
 
 [node name="Tile22" type="Sprite" parent="."]
 position = Vector2( 384, 256 )
-texture = ExtResource( 22 )
+texture = SubResource( 20 )
 centered = false
 
 [node name="Tile23" type="Sprite" parent="."]
 position = Vector2( 512, 256 )
-texture = ExtResource( 23 )
+texture = SubResource( 21 )
 centered = false
 
 [node name="Tile24" type="Sprite" parent="."]
 position = Vector2( 640, 256 )
-texture = ExtResource( 24 )
+texture = SubResource( 22 )
 centered = false
 
 [node name="Tile25" type="Sprite" parent="."]
 position = Vector2( 768, 256 )
-texture = ExtResource( 25 )
+texture = SubResource( 23 )
 centered = false
 
 [node name="Tile26" type="Sprite" parent="."]
 position = Vector2( 896, 256 )
-texture = ExtResource( 26 )
+texture = SubResource( 24 )
 centered = false
