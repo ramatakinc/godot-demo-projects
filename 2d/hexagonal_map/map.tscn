@@ -73,7 +73,7 @@ next_pass = SubResource( 2 )
 material = SubResource( 4 )
 position = Vector2( 521, -242 )
 texture = ExtResource( 4 )
-polygon = PoolVector2Array( -2, 659, 203, 788, 183, 1071, 325, 1168, 419, 1304, 652, 1208, 949, 1212, 1113, 1013, 1135, 745, 1259, 692, 1306, 328, 1090, 310, 902, 400, 718, 253, 585, 355, 322, 344, 91, 422 )
+polygon = PoolVector2Array( -2, 659, 203, 788, 183, 1071, 325, 1168, 419, 1304, 652, 1208, 949, 1212, 1113, 1013, 1135, 745, 1259, 692, 1306, 328, 1090, 310, 902, 400, 718, 253, 585, 355, 322, 344, 91.0001, 422 )
 
 [node name="TileMapShadow" type="TileMap" parent="."]
 modulate = Color( 0.0627451, 0.00392157, 0.207843, 0.243137 )
@@ -155,32 +155,3 @@ tile_data = PoolIntArray( -851956, 26, 0, -851948, 26, 0, -786428, 26, 0, -78640
 
 [node name="Troll" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 602.819, -39.2876 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 1923, 914, 1897, 959, 1923, 1003, 1979, 1003, 2004, 959, 1977, 911 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-visible = false
-position = Vector2( -246, -137 )
-polygon = PoolVector2Array( 1923, 914, 1897, 959, 1923, 1003, 1979, 1003, 2004, 959, 1977, 911 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
-visible = false
-position = Vector2( -410, 51 )
-polygon = PoolVector2Array( 1923, 914, 1897, 959, 1923, 1003, 1979, 1003, 2004, 959, 1977, 911 )
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D2"]
-visible = false
-position = Vector2( -492, 187 )
-polygon = PoolVector2Array( 1923, 914, 1897, 959, 1923, 1003, 1979, 1003, 2004, 959, 1977, 911 )
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D2"]
-visible = false
-position = Vector2( -1722, -422 )
-polygon = PoolVector2Array( 1923, 914, 1897, 959, 1923, 1003, 1979, 1003, 2004, 959, 1977, 911 )
