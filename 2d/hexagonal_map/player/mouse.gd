@@ -38,7 +38,7 @@ func _physics_process(_delta):
 	motion = motion.normalized() * MOTION_SPEED
 	#warning-ignore:return_value_discarded
 	var dir = move_and_slide(motion)
-	
+
 	if dir.length() > 0:
 		last_direction = dir
 		update_animation("walk")

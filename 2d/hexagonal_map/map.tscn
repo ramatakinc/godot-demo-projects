@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://tilesets/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://player/troll.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/mouse.tscn" type="PackedScene" id=2]
 [ext_resource path="res://shaders/water_waves.tres" type="Shader" id=3]
 [ext_resource path="res://tiles/tile_grass_1.png" type="Texture" id=4]
 [ext_resource path="res://tilesets/collision_tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://tilesets/shadow_tileset.tres" type="TileSet" id=6]
+[ext_resource path="res://tiles/tile_grass_float_1.png" type="Texture" id=7]
+[ext_resource path="res://decorations/tree_green_1.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 3 )
@@ -67,6 +69,46 @@ shader_param/line_thickness = 2.443
 [sub_resource type="CanvasItemMaterial" id=3]
 next_pass = SubResource( 2 )
 
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 7 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 7 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 7 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 128, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 256, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 384, 128, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "float",
+"speed": 8.0
+} ]
+
 [node name="Map" type="Node2D"]
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
@@ -98,7 +140,551 @@ cell_tile_origin = 1
 cell_y_sort = true
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -851956, 26, 0, -851948, 26, 0, -786428, 26, 0, -786403, 26, 0, -720893, 26, 0, -720891, 26, 0, -720887, 26, 0, -720879, 26, 0, -720872, 26, 0, -655335, 26, 0, -589821, 26, 0, -589819, 26, 0, -589815, 26, 0, -589812, 26, 0, -589796, 26, 0, -589793, 26, 0, -524286, 26, 0, -524285, 26, 0, -524284, 26, 0, -524283, 26, 0, -524282, 26, 0, -524277, 26, 0, -524273, 26, 0, -524269, 26, 0, -524267, 26, 0, -524265, 26, 0, -524263, 26, 0, -524261, 26, 0, -393217, 26, 0, -458750, 26, 0, -458749, 26, 0, -458748, 26, 0, -458747, 26, 0, -458746, 26, 0, -458745, 26, 0, -458742, 26, 0, -458741, 26, 0, -458740, 26, 0, -458738, 26, 0, -458737, 26, 0, -458736, 26, 0, -458735, 26, 0, -458731, 26, 0, -458730, 27, 0, -458729, 27, 0, -458728, 26, 0, -458727, 26, 0, -458726, 27, 0, -458725, 26, 0, -458724, 26, 0, -393215, 26, 0, -393213, 26, 0, -393212, 26, 0, -393211, 26, 0, -393210, 27, 0, -393209, 26, 0, -393208, 26, 0, -393207, 26, 0, -393205, 26, 0, -393204, 27, 0, -393203, 26, 0, -393202, 26, 0, -393201, 26, 0, -393196, 26, 0, -393195, 26, 0, -393194, 26, 0, -393193, 27, 0, -393192, 26, 0, -393191, 27, 0, -393190, 26, 0, -393189, 26, 0, -393188, 27, 0, -393187, 26, 0, -393185, 26, 0, -327680, 26, 0, -327679, 27, 0, -327678, 26, 0, -327677, 26, 0, -327676, 27, 0, -327675, 26, 0, -327674, 26, 0, -327673, 27, 0, -327672, 27, 0, -327671, 26, 0, -327670, 26, 0, -327669, 26, 0, -327668, 27, 0, -327667, 26, 0, -327666, 26, 0, -327665, 27, 0, -327659, 26, 0, -327658, 26, 0, -327657, 26, 0, -327656, 26, 0, -327655, 26, 0, -327654, 26, 0, -327653, 26, 0, -327652, 27, 0, -196611, 26, 0, -262144, 26, 0, -262143, 26, 0, -262142, 26, 0, -262141, 27, 0, -262140, 26, 0, -262139, 27, 0, -262138, 26, 0, -262137, 26, 0, -262136, 26, 0, -262135, 26, 0, -262134, 27, 0, -262133, 27, 0, -262132, 27, 0, -262131, 26, 0, -262130, 26, 0, -262129, 26, 0, -262128, 26, 0, -262122, 26, 0, -262121, 27, 0, -262120, 26, 0, -262119, 26, 0, -262118, 26, 0, -262117, 26, 0, -196607, 27, 0, -196606, 27, 0, -196605, 26, 0, -196604, 27, 0, -196603, 26, 0, -196602, 26, 0, -196601, 27, 0, -196600, 27, 0, -196599, 26, 0, -196598, 27, 0, -196597, 27, 0, -196596, 27, 0, -196595, 26, 0, -196594, 26, 0, -196593, 27, 0, -196592, 26, 0, -196591, 26, 0, -196590, 26, 0, -196589, 26, 0, -196588, 26, 0, -196587, 26, 0, -196586, 26, 0, -196585, 26, 0, -196584, 26, 0, -196583, 26, 0, -131072, 26, 0, -131071, 26, 0, -131070, 27, 0, -131069, 26, 0, -131068, 26, 0, -131067, 26, 0, -131066, 26, 0, -131065, 26, 0, -131064, 26, 0, -131063, 27, 0, -131062, 26, 0, -131061, 26, 0, -131060, 26, 0, -131059, 26, 0, -131058, 26, 0, -131057, 27, 0, -131056, 26, 0, -131055, 26, 0, -131054, 26, 0, -131053, 26, 0, -131052, 26, 0, -131051, 26, 0, -131050, 26, 0, -131049, 26, 0, -131048, 26, 0, -131037, 26, 0, -65536, 26, 0, -65535, 26, 0, -65534, 27, 0, -65533, 26, 0, -65532, 27, 0, -65531, 26, 0, -65530, 26, 0, -65529, 27, 0, -65528, 26, 0, -65527, 26, 0, -65526, 27, 0, -65525, 26, 0, -65524, 26, 0, -65523, 27, 0, -65522, 26, 0, -65521, 27, 0, -65520, 27, 0, -65519, 26, 0, -65518, 26, 0, -65517, 26, 0, -65516, 26, 0, -65515, 26, 0, -65514, 26, 0, -65513, 27, 0, -65510, 26, 0, 65528, 26, 0, 65534, 26, 0, 2, 26, 0, 3, 27, 0, 4, 26, 0, 5, 26, 0, 6, 27, 0, 7, 26, 0, 8, 26, 0, 9, 27, 0, 10, 26, 0, 11, 26, 0, 12, 26, 0, 13, 26, 0, 14, 27, 0, 15, 26, 0, 16, 26, 0, 17, 26, 0, 18, 26, 0, 19, 26, 0, 20, 26, 0, 21, 26, 0, 22, 26, 0, 23, 26, 0, 24, 26, 0, 25, 26, 0, 29, 26, 0, 65538, 26, 0, 65539, 26, 0, 65540, 26, 0, 65541, 26, 0, 65542, 27, 0, 65543, 26, 0, 65544, 26, 0, 65545, 26, 0, 65546, 26, 0, 65548, 26, 0, 65550, 26, 0, 65551, 26, 0, 65552, 26, 0, 65553, 26, 0, 65554, 26, 0, 65557, 26, 0, 65558, 26, 0, 65559, 27, 0, 65560, 26, 0, 65561, 26, 0, 65563, 26, 0, 196603, 26, 0, 131072, 26, 0, 131074, 26, 0, 131075, 26, 0, 131076, 27, 0, 131077, 26, 0, 131078, 26, 0, 131079, 26, 0, 131087, 26, 0, 131090, 26, 0, 131093, 26, 0, 131094, 26, 0, 131095, 26, 0, 131096, 26, 0, 131097, 27, 0, 131098, 27, 0, 262141, 26, 0, 262142, 26, 0, 262143, 26, 0, 196609, 26, 0, 196610, 26, 0, 196611, 26, 0, 196612, 27, 0, 196613, 26, 0, 196614, 27, 0, 196615, 26, 0, 196629, 27, 0, 196630, 26, 0, 196631, 26, 0, 196632, 27, 0, 196633, 26, 0, 196634, 26, 0, 196635, 27, 0, 196638, 26, 0, 327672, 26, 0, 327677, 26, 0, 327678, 27, 0, 327679, 27, 0, 262144, 26, 0, 262145, 26, 0, 262146, 27, 0, 262147, 26, 0, 262148, 26, 0, 262149, 26, 0, 262150, 27, 0, 262151, 26, 0, 262157, 26, 0, 262163, 26, 0, 262164, 26, 0, 262165, 26, 0, 262166, 26, 0, 262167, 27, 0, 262168, 26, 0, 262169, 26, 0, 262181, 26, 0, 393214, 26, 0, 393215, 26, 0, 327680, 26, 0, 327681, 26, 0, 327683, 26, 0, 327686, 26, 0, 327687, 26, 0, 327688, 26, 0, 327692, 26, 0, 327693, 27, 0, 327694, 27, 0, 327699, 26, 0, 327700, 26, 0, 327701, 27, 0, 327702, 26, 0, 327703, 26, 0, 327704, 27, 0, 327705, 26, 0, 327707, 26, 0, 458747, 26, 0, 458750, 26, 0, 458751, 26, 0, 393216, 27, 0, 393217, 26, 0, 393218, 26, 0, 393221, 26, 0, 393222, 26, 0, 393223, 26, 0, 393224, 26, 0, 393228, 26, 0, 393229, 27, 0, 393230, 26, 0, 393235, 26, 0, 393236, 27, 0, 393237, 26, 0, 393238, 26, 0, 393239, 27, 0, 393240, 27, 0, 393241, 27, 0, 393249, 26, 0, 458752, 26, 0, 458757, 26, 0, 458758, 26, 0, 458759, 26, 0, 458760, 26, 0, 458771, 26, 0, 458772, 26, 0, 458773, 26, 0, 458774, 26, 0, 458775, 26, 0, 458776, 26, 0, 458778, 26, 0, 458781, 26, 0, 589822, 27, 0, 524292, 27, 0, 524293, 27, 0, 524294, 27, 0, 524295, 27, 0, 524296, 26, 0, 524297, 26, 0, 524306, 26, 0, 524307, 26, 0, 524309, 26, 0, 524310, 26, 0, 524311, 26, 0, 524312, 26, 0, 524315, 26, 0, 655354, 26, 0, 589826, 27, 0, 589828, 27, 0, 589829, 26, 0, 589830, 26, 0, 589831, 26, 0, 589832, 27, 0, 589833, 26, 0, 589834, 26, 0, 589837, 26, 0, 589838, 26, 0, 589839, 26, 0, 589840, 26, 0, 589841, 26, 0, 589842, 26, 0, 589843, 26, 0, 589844, 26, 0, 589845, 26, 0, 589846, 26, 0, 589848, 26, 0, 589849, 26, 0, 655364, 26, 0, 655366, 27, 0, 655367, 26, 0, 655368, 26, 0, 655369, 27, 0, 655370, 26, 0, 655371, 26, 0, 655372, 26, 0, 655373, 27, 0, 655374, 27, 0, 655375, 26, 0, 655376, 27, 0, 655377, 26, 0, 655379, 26, 0, 655380, 26, 0, 655382, 26, 0, 655383, 26, 0, 655384, 26, 0, 655385, 26, 0, 720902, 26, 0, 720903, 26, 0, 720904, 26, 0, 720905, 27, 0, 720906, 26, 0, 720907, 26, 0, 720908, 26, 0, 720909, 26, 0, 720910, 26, 0, 720911, 26, 0, 720912, 26, 0, 720914, 26, 0, 720915, 26, 0, 786440, 26, 0, 786441, 26, 0, 786442, 26, 0, 786443, 26, 0, 786444, 26, 0, 786445, 27, 0, 786446, 26, 0, 786448, 26, 0, 786449, 26, 0, 786450, 26, 0, 786451, 26, 0, 851972, 26, 0, 851975, 27, 0, 851986, 26, 0, 851991, 26, 0, 851995, 26, 0, 917515, 27, 0, 917518, 26, 0, 917524, 26, 0, 983046, 26, 0, 983051, 26, 0, 983063, 26, 0, 1048579, 26, 0, 1114120, 26, 0, 1179666, 26, 0 )
+tile_data = PoolIntArray( -851956, 26, 0, -851948, 26, 0, -786428, 26, 0, -786403, 26, 0, -720893, 26, 0, -720891, 26, 0, -720887, 26, 0, -720879, 26, 0, -720872, 26, 0, -655335, 26, 0, -589821, 26, 0, -589819, 26, 0, -589815, 26, 0, -589812, 26, 0, -589796, 26, 0, -589793, 26, 0, -524286, 26, 0, -524285, 26, 0, -524284, 26, 0, -524283, 26, 0, -524282, 26, 0, -524277, 26, 0, -524273, 26, 0, -524269, 26, 0, -524267, 26, 0, -524265, 26, 0, -524263, 26, 0, -524261, 26, 0, -393217, 26, 0, -458750, 26, 0, -458749, 26, 0, -458748, 26, 0, -458747, 26, 0, -458746, 26, 0, -458745, 26, 0, -458742, 26, 0, -458741, 26, 0, -458740, 26, 0, -458738, 26, 0, -458737, 26, 0, -458736, 26, 0, -458735, 26, 0, -458731, 26, 0, -458730, 27, 0, -458729, 27, 0, -458728, 26, 0, -458727, 26, 0, -458726, 27, 0, -458725, 26, 0, -458724, 26, 0, -393215, 26, 0, -393213, 26, 0, -393212, 26, 0, -393211, 26, 0, -393210, 27, 0, -393209, 26, 0, -393208, 26, 0, -393207, 26, 0, -393205, 26, 0, -393204, 27, 0, -393203, 26, 0, -393202, 26, 0, -393201, 26, 0, -393196, 26, 0, -393195, 26, 0, -393194, 26, 0, -393193, 27, 0, -393192, 26, 0, -393191, 27, 0, -393190, 26, 0, -393189, 26, 0, -393188, 27, 0, -393187, 26, 0, -393185, 26, 0, -327680, 26, 0, -327679, 27, 0, -327678, 26, 0, -327677, 26, 0, -327676, 27, 0, -327675, 26, 0, -327674, 26, 0, -327673, 27, 0, -327672, 27, 0, -327671, 26, 0, -327670, 26, 0, -327669, 26, 0, -327668, 27, 0, -327667, 26, 0, -327666, 26, 0, -327665, 27, 0, -327659, 26, 0, -327658, 26, 0, -327657, 26, 0, -327656, 26, 0, -327655, 26, 0, -327654, 26, 0, -327653, 26, 0, -327652, 27, 0, -196611, 26, 0, -262144, 26, 0, -262143, 26, 0, -262142, 26, 0, -262141, 27, 0, -262140, 26, 0, -262139, 27, 0, -262138, 26, 0, -262137, 26, 0, -262136, 26, 0, -262135, 26, 0, -262134, 27, 0, -262133, 27, 0, -262132, 27, 0, -262131, 26, 0, -262130, 26, 0, -262129, 26, 0, -262128, 26, 0, -262122, 26, 0, -262121, 27, 0, -262120, 26, 0, -262119, 26, 0, -262118, 26, 0, -262117, 26, 0, -196607, 27, 0, -196606, 27, 0, -196605, 26, 0, -196604, 27, 0, -196603, 26, 0, -196602, 26, 0, -196601, 27, 0, -196600, 27, 0, -196599, 26, 0, -196598, 27, 0, -196597, 27, 0, -196596, 27, 0, -196595, 26, 0, -196594, 26, 0, -196593, 27, 0, -196592, 26, 0, -196591, 26, 0, -196590, 26, 0, -196589, 26, 0, -196588, 26, 0, -196587, 26, 0, -196586, 26, 0, -196585, 26, 0, -196584, 26, 0, -196583, 26, 0, -131072, 26, 0, -131071, 26, 0, -131070, 27, 0, -131069, 26, 0, -131068, 26, 0, -131067, 26, 0, -131066, 26, 0, -131065, 26, 0, -131064, 26, 0, -131063, 27, 0, -131062, 26, 0, -131061, 26, 0, -131060, 26, 0, -131059, 26, 0, -131058, 26, 0, -131057, 27, 0, -131056, 26, 0, -131055, 26, 0, -131054, 26, 0, -131053, 26, 0, -131052, 26, 0, -131051, 26, 0, -131050, 26, 0, -131049, 26, 0, -131048, 26, 0, -131037, 26, 0, -65536, 26, 0, -65535, 26, 0, -65534, 27, 0, -65533, 26, 0, -65532, 27, 0, -65531, 26, 0, -65530, 26, 0, -65529, 27, 0, -65528, 26, 0, -65527, 26, 0, -65526, 27, 0, -65525, 26, 0, -65524, 26, 0, -65523, 27, 0, -65522, 26, 0, -65521, 27, 0, -65520, 27, 0, -65519, 26, 0, -65518, 26, 0, -65517, 26, 0, -65516, 26, 0, -65515, 26, 0, -65514, 26, 0, -65513, 27, 0, -65510, 26, 0, 65528, 26, 0, 65534, 26, 0, 2, 26, 0, 3, 27, 0, 4, 26, 0, 5, 26, 0, 6, 27, 0, 7, 26, 0, 8, 26, 0, 9, 27, 0, 10, 26, 0, 11, 26, 0, 12, 26, 0, 13, 26, 0, 14, 27, 0, 15, 26, 0, 16, 26, 0, 17, 26, 0, 18, 26, 0, 19, 26, 0, 20, 26, 0, 21, 26, 0, 22, 26, 0, 23, 26, 0, 24, 26, 0, 25, 26, 0, 29, 26, 0, 65538, 26, 0, 65539, 26, 0, 65540, 26, 0, 65541, 26, 0, 65542, 27, 0, 65543, 26, 0, 65544, 26, 0, 65545, 26, 0, 65546, 26, 0, 65548, 26, 0, 65550, 26, 0, 65551, 26, 0, 65552, 26, 0, 65553, 26, 0, 65554, 26, 0, 65557, 26, 0, 65558, 26, 0, 65559, 27, 0, 65560, 26, 0, 65561, 26, 0, 65563, 26, 0, 196603, 26, 0, 196605, 27, 0, 196606, 27, 0, 196607, 27, 0, 131072, 26, 0, 131074, 26, 0, 131075, 26, 0, 131076, 27, 0, 131077, 26, 0, 131078, 26, 0, 131079, 26, 0, 131087, 26, 0, 131090, 26, 0, 131093, 26, 0, 131094, 26, 0, 131095, 26, 0, 131096, 26, 0, 131097, 27, 0, 131098, 27, 0, 262140, 27, 0, 262141, 26, 0, 262142, 26, 0, 262143, 26, 0, 196609, 26, 0, 196610, 26, 0, 196611, 26, 0, 196612, 27, 0, 196613, 26, 0, 196614, 27, 0, 196615, 26, 0, 196629, 27, 0, 196630, 26, 0, 196631, 26, 0, 196632, 27, 0, 196633, 26, 0, 196634, 26, 0, 196635, 27, 0, 196638, 26, 0, 327672, 26, 0, 327676, 27, 0, 327677, 26, 0, 327678, 27, 0, 327679, 27, 0, 262144, 26, 0, 262145, 26, 0, 262146, 27, 0, 262147, 26, 0, 262148, 26, 0, 262149, 26, 0, 262150, 27, 0, 262151, 26, 0, 262157, 26, 0, 262163, 26, 0, 262164, 26, 0, 262165, 26, 0, 262166, 26, 0, 262167, 27, 0, 262168, 26, 0, 262169, 26, 0, 262181, 26, 0, 393212, 27, 0, 393213, 27, 0, 393214, 26, 0, 393215, 26, 0, 327680, 26, 0, 327681, 26, 0, 327683, 26, 0, 327686, 26, 0, 327687, 26, 0, 327688, 26, 0, 327692, 26, 0, 327693, 27, 0, 327694, 27, 0, 327699, 26, 0, 327700, 26, 0, 327701, 27, 0, 327702, 26, 0, 327703, 26, 0, 327704, 27, 0, 327705, 26, 0, 327707, 26, 0, 458747, 26, 0, 458750, 26, 0, 458751, 26, 0, 393216, 27, 0, 393217, 26, 0, 393218, 26, 0, 393221, 26, 0, 393222, 26, 0, 393223, 26, 0, 393224, 26, 0, 393228, 26, 0, 393229, 27, 0, 393230, 26, 0, 393235, 26, 0, 393236, 27, 0, 393237, 26, 0, 393238, 26, 0, 393239, 27, 0, 393240, 27, 0, 393241, 27, 0, 393249, 26, 0, 458752, 26, 0, 458757, 26, 0, 458758, 26, 0, 458759, 26, 0, 458760, 26, 0, 458771, 26, 0, 458772, 26, 0, 458773, 26, 0, 458774, 26, 0, 458775, 26, 0, 458776, 26, 0, 458778, 26, 0, 458781, 26, 0, 589822, 27, 0, 524292, 27, 0, 524293, 27, 0, 524294, 27, 0, 524295, 27, 0, 524296, 26, 0, 524297, 26, 0, 524306, 26, 0, 524307, 26, 0, 524309, 26, 0, 524310, 26, 0, 524311, 26, 0, 524312, 26, 0, 524315, 26, 0, 655354, 26, 0, 589826, 27, 0, 589828, 27, 0, 589829, 26, 0, 589830, 26, 0, 589831, 26, 0, 589832, 27, 0, 589833, 26, 0, 589834, 26, 0, 589837, 26, 0, 589838, 26, 0, 589839, 26, 0, 589840, 26, 0, 589841, 26, 0, 589842, 26, 0, 589843, 26, 0, 589844, 26, 0, 589845, 26, 0, 589846, 26, 0, 589848, 26, 0, 589849, 26, 0, 655364, 26, 0, 655366, 27, 0, 655367, 26, 0, 655368, 26, 0, 655369, 27, 0, 655370, 26, 0, 655371, 26, 0, 655372, 26, 0, 655373, 27, 0, 655374, 27, 0, 655375, 26, 0, 655376, 27, 0, 655377, 26, 0, 655379, 26, 0, 655380, 26, 0, 655382, 26, 0, 655383, 26, 0, 655384, 26, 0, 655385, 26, 0, 720902, 26, 0, 720903, 26, 0, 720904, 26, 0, 720905, 27, 0, 720906, 26, 0, 720907, 26, 0, 720908, 26, 0, 720909, 26, 0, 720910, 26, 0, 720911, 26, 0, 720912, 26, 0, 720914, 26, 0, 720915, 26, 0, 786440, 26, 0, 786441, 26, 0, 786442, 26, 0, 786443, 26, 0, 786444, 26, 0, 786445, 27, 0, 786446, 26, 0, 786448, 26, 0, 786449, 26, 0, 786450, 26, 0, 786451, 26, 0, 851972, 26, 0, 851975, 27, 0, 851986, 26, 0, 851991, 26, 0, 851995, 26, 0, 917515, 27, 0, 917518, 26, 0, 917524, 26, 0, 983046, 26, 0, 983051, 26, 0, 983063, 26, 0, 1048579, 26, 0, 1114120, 26, 0, 1179666, 26, 0 )
+
+[node name="FloatingTiles" type="YSort" parent="TileMap"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -148, -398 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -218, -518 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -224, -36 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite31" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2464, 484 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite34" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2634, 766 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite38" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1744, 1183 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite39" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2019, 1151 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite41" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1396, 1386 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite43" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 806, 1401 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 7
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 18, 118 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -281, 181 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -378, 448 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 284, 761 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite56" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -496, 686 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite46" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 265, 1084 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite49" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 508, 1224 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite8" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2305, -109 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite9" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1627, -311 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite10" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1206, -743 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 7
+playing = true
+
+[node name="AnimatedSprite11" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 670, -788 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 7
+playing = true
+
+[node name="AnimatedSprite12" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1871, -784 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 6
+playing = true
+
+[node name="AnimatedSprite27" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2464, -304 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite13" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 101, -784 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 6
+playing = true
+
+[node name="AnimatedSprite66" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 99, -644 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite14" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -42, -695 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite15" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 175.6, -893.4 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite16" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 617, -912 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite19" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1181, -924 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite67" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 959, -918 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite68" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 751, -1056 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite69" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1391, -1064 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite20" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1459, -766 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite35" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1726, -955 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite21" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1565, -442 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite22" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1409, -456 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite23" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2481, -796 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite24" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2675, -605 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite25" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2267, -949 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite26" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2639, -334 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite28" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2484, -177 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite29" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2545, -65 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite32" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2604, 441 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite33" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2576, 598 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 7
+playing = true
+
+[node name="AnimatedSprite36" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1795, 1101 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 7
+playing = true
+
+[node name="AnimatedSprite40" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2104, 1245 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 6
+playing = true
+
+[node name="AnimatedSprite42" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1481, 1459 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite44" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 823, 1525 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite50" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 491, 1385 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite51" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 272, 1326 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite52" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 229, 1462 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite53" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1097, 1485 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite54" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1261, 1559 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite45" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 95, 871 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite47" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 290, 1168 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite55" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -224, 790 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite57" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -480, 177 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite58" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -439, 538 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite59" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -476, 370 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite60" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -114, -96 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite61" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -300, -182 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite62" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -317, -374 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite63" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -386, 60 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite64" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -381, -518 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite65" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -129, -866 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite48" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 81.0001, 1120 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite37" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 1459, 1156 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 6
+playing = true
+
+[node name="AnimatedSprite30" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 2359, 24 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+playing = true
+
+[node name="AnimatedSprite17" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( 403, -817 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite18" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
+position = Vector2( -168, -663 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 13 )
+animation = "float"
+frame = 3
+playing = true
 
 [node name="TileMapShadow2" type="TileMap" parent="."]
 visible = false
@@ -125,7 +711,7 @@ cell_tile_origin = 1
 cell_y_sort = true
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -393215, 27, 0, -393208, 26, 0, -393207, 26, 0, -393205, 27, 0, -393201, 27, 0, -393196, 27, 0, -393195, 27, 0, -393194, 27, 0, -327680, 27, 0, -327679, 27, 0, -327678, 27, 0, -327677, 27, 0, -327671, 27, 0, -327670, 27, 0, -327669, 26, 0, -327665, 27, 0, -327659, 27, 0, -327658, 27, 0, -262144, 27, 0, -262143, 27, 0, -262142, 27, 0, -262141, 27, 0, -262140, 27, 0, -262136, 26, 0, -262135, 27, 0, -262134, 26, 0, -262133, 27, 0, -262128, 27, 0, -196607, 27, 0, -196606, 27, 0, -196605, 27, 0, -196598, 26, 0, -131072, 27, 0, -131071, 27, 0, -131070, 27, 0, -131069, 27, 0, -131062, 26, 0, -65536, 27, 0, -65532, 26, 0, -65531, 27, 0, -65524, 27, 0, 4, 26, 0, 24, 27, 0, 25, 27, 0, 65560, 27, 0, 65561, 27, 0, 65563, 27, 0, 131097, 27, 0, 131098, 27, 0, 262141, 27, 0, 262142, 27, 0, 262143, 27, 0, 196633, 27, 0, 196634, 27, 0, 196635, 27, 0, 327677, 27, 0, 327678, 27, 0, 327679, 27, 0, 262144, 27, 0, 262168, 27, 0, 262169, 27, 0, 393214, 27, 0, 327693, 27, 0, 327703, 27, 0, 327704, 27, 0, 327705, 27, 0, 393240, 27, 0, 393241, 27, 0, 458778, 27, 0 )
+tile_data = PoolIntArray( -327681, 26, 0, -393216, 26, 0, -393215, 27, 0, -393208, 26, 0, -393207, 26, 0, -393205, 27, 0, -393201, 27, 0, -393196, 27, 0, -393195, 27, 0, -393194, 27, 0, -262145, 26, 0, -327680, 27, 0, -327679, 27, 0, -327678, 27, 0, -327677, 27, 0, -327671, 27, 0, -327670, 27, 0, -327669, 26, 0, -327665, 27, 0, -327659, 27, 0, -327658, 27, 0, -262144, 27, 0, -262143, 27, 0, -262142, 27, 0, -262141, 27, 0, -262140, 27, 0, -262136, 26, 0, -262135, 27, 0, -262134, 26, 0, -262133, 27, 0, -262128, 27, 0, -196607, 27, 0, -196606, 27, 0, -196605, 27, 0, -196598, 26, 0, -131072, 27, 0, -131071, 27, 0, -131070, 27, 0, -131069, 27, 0, -131062, 26, 0, -65536, 27, 0, -65532, 26, 0, -65531, 27, 0, -65524, 27, 0, 4, 26, 0, 24, 27, 0, 25, 27, 0, 65560, 27, 0, 65561, 27, 0, 65563, 27, 0, 196605, 26, 0, 196606, 26, 0, 196607, 26, 0, 131097, 27, 0, 131098, 27, 0, 262140, 26, 0, 262141, 27, 0, 262142, 27, 0, 262143, 27, 0, 196633, 27, 0, 196634, 27, 0, 196635, 27, 0, 327676, 26, 0, 327677, 27, 0, 327678, 27, 0, 327679, 27, 0, 262144, 27, 0, 262168, 27, 0, 262169, 27, 0, 393212, 26, 0, 393214, 27, 0, 327693, 27, 0, 327703, 27, 0, 327704, 27, 0, 327705, 27, 0, 393240, 27, 0, 393241, 27, 0, 458778, 27, 0 )
 
 [node name="TileMap_level3" type="TileMap" parent="."]
 modulate = Color( 0.8, 0.8, 0.8, 1 )
@@ -151,7 +737,42 @@ show_collision = true
 format = 1
 tile_data = PoolIntArray( -851956, 26, 0, -851948, 26, 0, -786428, 26, 0, -786403, 26, 0, -720893, 26, 0, -720891, 26, 0, -720887, 26, 0, -720879, 26, 0, -720872, 26, 0, -655357, 27, 0, -655356, 27, 0, -655355, 27, 0, -655351, 27, 0, -655335, 26, 0, -589823, 27, 0, -589822, 27, 0, -589821, 26, 0, -589820, 27, 0, -589819, 26, 0, -589818, 27, 0, -589817, 27, 0, -589816, 27, 0, -589815, 26, 0, -589814, 27, 0, -589813, 27, 0, -589812, 26, 0, -589809, 27, 0, -589803, 27, 0, -589801, 27, 0, -589799, 27, 0, -589797, 27, 0, -589796, 26, 0, -589793, 26, 0, -458753, 27, 0, -524287, 27, 0, -524286, 26, 0, -524285, 26, 0, -524284, 26, 0, -524283, 26, 0, -524282, 26, 0, -524281, 27, 0, -524280, 27, 0, -524279, 27, 0, -524278, 27, 0, -524277, 26, 0, -524276, 27, 0, -524275, 27, 0, -524274, 27, 0, -524273, 26, 0, -524272, 27, 0, -524271, 27, 0, -524269, 26, 0, -524268, 27, 0, -524267, 26, 0, -524266, 27, 0, -524265, 26, 0, -524264, 27, 0, -524263, 26, 0, -524262, 27, 0, -524261, 26, 0, -524260, 27, 0, -524259, 27, 0, -393218, 27, 0, -393217, 26, 0, -458752, 27, 0, -458751, 27, 0, -458750, 26, 0, -458749, 26, 0, -458748, 26, 0, -458747, 26, 0, -458746, 26, 0, -458745, 26, 0, -458744, 27, 0, -458743, 27, 0, -458742, 26, 0, -458741, 26, 0, -458740, 26, 0, -458739, 27, 0, -458738, 26, 0, -458737, 26, 0, -458736, 26, 0, -458735, 26, 0, -458734, 27, 0, -458733, 27, 0, -458732, 27, 0, -458731, 26, 0, -458730, 26, 0, -458729, 26, 0, -458728, 26, 0, -458727, 26, 0, -458726, 26, 0, -458725, 26, 0, -458724, 26, 0, -458723, 27, 0, -327682, 27, 0, -327681, 27, 0, -393216, 27, 0, -393215, 27, 0, -393214, 27, 0, -393213, 26, 0, -393212, 26, 0, -393211, 26, 0, -393210, 26, 0, -393209, 26, 0, -393208, 27, 0, -393207, 27, 0, -393206, 27, 0, -393205, 27, 0, -393204, 26, 0, -393203, 26, 0, -393202, 26, 0, -393201, 27, 0, -393200, 27, 0, -393199, 27, 0, -393198, 27, 0, -393197, 27, 0, -393196, 27, 0, -393195, 27, 0, -393194, 27, 0, -393193, 26, 0, -393192, 26, 0, -393191, 26, 0, -393190, 26, 0, -393189, 26, 0, -393188, 26, 0, -393187, 26, 0, -393186, 27, 0, -393185, 26, 0, -262145, 27, 0, -327680, 27, 0, -327679, 27, 0, -327678, 27, 0, -327677, 27, 0, -327676, 26, 0, -327675, 26, 0, -327674, 26, 0, -327673, 26, 0, -327672, 26, 0, -327671, 27, 0, -327670, 27, 0, -327669, 27, 0, -327668, 26, 0, -327667, 26, 0, -327666, 26, 0, -327665, 27, 0, -327664, 27, 0, -327663, 27, 0, -327662, 27, 0, -327661, 27, 0, -327660, 27, 0, -327659, 27, 0, -327658, 27, 0, -327657, 26, 0, -327656, 26, 0, -327655, 26, 0, -327654, 26, 0, -327653, 26, 0, -327652, 26, 0, -327651, 27, 0, -327650, 27, 0, -196611, 26, 0, -196609, 27, 0, -262144, 27, 0, -262143, 27, 0, -262142, 27, 0, -262141, 27, 0, -262140, 27, 0, -262139, 26, 0, -262138, 26, 0, -262137, 26, 0, -262136, 27, 0, -262135, 27, 0, -262134, 27, 0, -262133, 27, 0, -262132, 26, 0, -262131, 26, 0, -262130, 26, 0, -262129, 26, 0, -262128, 27, 0, -262127, 27, 0, -262126, 27, 0, -262125, 27, 0, -262124, 27, 0, -262123, 27, 0, -262122, 26, 0, -262121, 26, 0, -262120, 26, 0, -262119, 26, 0, -262118, 26, 0, -262117, 26, 0, -262116, 27, 0, -131073, 27, 0, -196608, 27, 0, -196607, 27, 0, -196606, 27, 0, -196605, 27, 0, -196604, 26, 0, -196603, 26, 0, -196602, 26, 0, -196601, 26, 0, -196600, 26, 0, -196599, 26, 0, -196598, 27, 0, -196597, 26, 0, -196596, 26, 0, -196595, 26, 0, -196594, 26, 0, -196593, 26, 0, -196592, 26, 0, -196591, 26, 0, -196590, 26, 0, -196589, 26, 0, -196588, 26, 0, -196587, 26, 0, -196586, 26, 0, -196585, 26, 0, -196584, 26, 0, -196583, 26, 0, -196582, 27, 0, -196581, 27, 0, -196580, 27, 0, -65537, 27, 0, -131072, 27, 0, -131071, 27, 0, -131070, 27, 0, -131069, 27, 0, -131068, 26, 0, -131067, 26, 0, -131066, 26, 0, -131065, 26, 0, -131064, 26, 0, -131063, 26, 0, -131062, 27, 0, -131061, 26, 0, -131060, 26, 0, -131059, 26, 0, -131058, 26, 0, -131057, 26, 0, -131056, 26, 0, -131055, 26, 0, -131054, 26, 0, -131053, 26, 0, -131052, 26, 0, -131051, 26, 0, -131050, 26, 0, -131049, 26, 0, -131048, 26, 0, -131047, 27, 0, -131046, 27, 0, -131037, 26, 0, -2, 27, 0, -1, 27, 0, -65536, 27, 0, -65535, 26, 0, -65534, 26, 0, -65533, 26, 0, -65532, 27, 0, -65531, 27, 0, -65530, 26, 0, -65529, 26, 0, -65528, 26, 0, -65527, 26, 0, -65526, 26, 0, -65525, 26, 0, -65524, 27, 0, -65523, 26, 0, -65522, 26, 0, -65521, 26, 0, -65520, 26, 0, -65519, 26, 0, -65518, 26, 0, -65517, 26, 0, -65516, 26, 0, -65515, 26, 0, -65514, 26, 0, -65513, 26, 0, -65512, 27, 0, -65511, 27, 0, -65510, 26, 0, 65528, 26, 0, 65534, 26, 0, 65535, 27, 0, 0, 27, 0, 1, 27, 0, 2, 26, 0, 3, 26, 0, 4, 27, 0, 5, 26, 0, 6, 26, 0, 7, 26, 0, 8, 26, 0, 9, 26, 0, 10, 26, 0, 11, 26, 0, 12, 26, 0, 13, 26, 0, 14, 26, 0, 15, 26, 0, 16, 26, 0, 17, 26, 0, 18, 26, 0, 19, 26, 0, 20, 26, 0, 21, 26, 0, 22, 26, 0, 23, 26, 0, 24, 27, 0, 25, 27, 0, 26, 27, 0, 27, 27, 0, 29, 26, 0, 131070, 27, 0, 131071, 27, 0, 65536, 27, 0, 65537, 27, 0, 65538, 26, 0, 65539, 26, 0, 65540, 26, 0, 65541, 26, 0, 65542, 26, 0, 65543, 26, 0, 65544, 26, 0, 65545, 26, 0, 65546, 26, 0, 65547, 27, 0, 65548, 26, 0, 65549, 27, 0, 65550, 26, 0, 65551, 26, 0, 65552, 26, 0, 65553, 26, 0, 65554, 26, 0, 65555, 27, 0, 65556, 27, 0, 65557, 26, 0, 65558, 26, 0, 65559, 26, 0, 65560, 27, 0, 65561, 27, 0, 65562, 27, 0, 65563, 27, 0, 65564, 27, 0, 196603, 26, 0, 196605, 27, 0, 196606, 27, 0, 196607, 27, 0, 131072, 26, 0, 131073, 27, 0, 131074, 26, 0, 131075, 26, 0, 131076, 26, 0, 131077, 26, 0, 131078, 26, 0, 131079, 26, 0, 131080, 27, 0, 131081, 27, 0, 131082, 27, 0, 131084, 27, 0, 131086, 27, 0, 131087, 26, 0, 131088, 27, 0, 131089, 27, 0, 131090, 26, 0, 131091, 27, 0, 131092, 27, 0, 131093, 26, 0, 131094, 26, 0, 131095, 26, 0, 131096, 26, 0, 131097, 27, 0, 131098, 27, 0, 131099, 27, 0, 131100, 27, 0, 262140, 27, 0, 262141, 27, 0, 262142, 27, 0, 262143, 27, 0, 196608, 27, 0, 196609, 26, 0, 196610, 26, 0, 196611, 26, 0, 196612, 26, 0, 196613, 26, 0, 196614, 26, 0, 196615, 26, 0, 196616, 27, 0, 196622, 27, 0, 196623, 27, 0, 196624, 27, 0, 196626, 27, 0, 196627, 27, 0, 196628, 27, 0, 196629, 26, 0, 196630, 26, 0, 196631, 26, 0, 196632, 26, 0, 196633, 27, 0, 196634, 27, 0, 196635, 27, 0, 196636, 27, 0, 196638, 26, 0, 327672, 26, 0, 327676, 27, 0, 327677, 27, 0, 327678, 27, 0, 327679, 27, 0, 262144, 27, 0, 262145, 26, 0, 262146, 26, 0, 262147, 26, 0, 262148, 26, 0, 262149, 26, 0, 262150, 26, 0, 262151, 26, 0, 262152, 27, 0, 262153, 27, 0, 262157, 26, 0, 262162, 27, 0, 262163, 26, 0, 262164, 26, 0, 262165, 26, 0, 262166, 26, 0, 262167, 26, 0, 262168, 27, 0, 262169, 27, 0, 262170, 27, 0, 262171, 27, 0, 262172, 27, 0, 262181, 26, 0, 393212, 27, 0, 393213, 27, 0, 393214, 27, 0, 393215, 26, 0, 327680, 26, 0, 327681, 26, 0, 327682, 27, 0, 327683, 26, 0, 327684, 27, 0, 327685, 27, 0, 327686, 26, 0, 327687, 26, 0, 327688, 26, 0, 327689, 27, 0, 327692, 26, 0, 327693, 27, 0, 327694, 26, 0, 327698, 27, 0, 327699, 26, 0, 327700, 26, 0, 327701, 26, 0, 327702, 26, 0, 327703, 27, 0, 327704, 27, 0, 327705, 27, 0, 327706, 27, 0, 327707, 26, 0, 458747, 26, 0, 458749, 27, 0, 458750, 26, 0, 458751, 26, 0, 393216, 26, 0, 393217, 26, 0, 393218, 26, 0, 393219, 27, 0, 393220, 27, 0, 393221, 26, 0, 393222, 26, 0, 393223, 26, 0, 393224, 26, 0, 393225, 27, 0, 393228, 26, 0, 393229, 26, 0, 393230, 26, 0, 393234, 27, 0, 393235, 26, 0, 393236, 26, 0, 393237, 26, 0, 393238, 26, 0, 393239, 26, 0, 393240, 27, 0, 393241, 27, 0, 393242, 27, 0, 393243, 27, 0, 393249, 26, 0, 524286, 27, 0, 524287, 27, 0, 458752, 26, 0, 458753, 27, 0, 458754, 27, 0, 458755, 27, 0, 458756, 27, 0, 458757, 26, 0, 458758, 26, 0, 458759, 26, 0, 458760, 26, 0, 458761, 27, 0, 458769, 27, 0, 458770, 27, 0, 458771, 26, 0, 458772, 26, 0, 458773, 26, 0, 458774, 26, 0, 458775, 26, 0, 458776, 26, 0, 458777, 27, 0, 458778, 27, 0, 458779, 27, 0, 458781, 26, 0, 589822, 26, 0, 524288, 27, 0, 524290, 27, 0, 524291, 27, 0, 524292, 26, 0, 524293, 26, 0, 524294, 26, 0, 524295, 26, 0, 524296, 26, 0, 524297, 26, 0, 524298, 27, 0, 524299, 27, 0, 524301, 27, 0, 524302, 27, 0, 524303, 27, 0, 524304, 27, 0, 524305, 27, 0, 524306, 26, 0, 524307, 26, 0, 524308, 27, 0, 524309, 26, 0, 524310, 26, 0, 524311, 26, 0, 524312, 26, 0, 524313, 27, 0, 524314, 27, 0, 524315, 26, 0, 655354, 26, 0, 589826, 26, 0, 589827, 27, 0, 589828, 26, 0, 589829, 26, 0, 589830, 26, 0, 589831, 26, 0, 589832, 26, 0, 589833, 26, 0, 589834, 26, 0, 589835, 27, 0, 589836, 27, 0, 589837, 26, 0, 589838, 26, 0, 589839, 26, 0, 589840, 26, 0, 589841, 26, 0, 589842, 26, 0, 589843, 26, 0, 589844, 26, 0, 589845, 26, 0, 589846, 26, 0, 589847, 27, 0, 589848, 26, 0, 589849, 26, 0, 589850, 27, 0, 589851, 27, 0, 655363, 27, 0, 655364, 26, 0, 655365, 27, 0, 655366, 26, 0, 655367, 26, 0, 655368, 26, 0, 655369, 26, 0, 655370, 26, 0, 655371, 26, 0, 655372, 26, 0, 655373, 26, 0, 655374, 26, 0, 655375, 26, 0, 655376, 26, 0, 655377, 26, 0, 655378, 27, 0, 655379, 26, 0, 655380, 26, 0, 655381, 27, 0, 655382, 26, 0, 655383, 26, 0, 655384, 26, 0, 655385, 26, 0, 655386, 27, 0, 720900, 27, 0, 720901, 27, 0, 720903, 26, 0, 720904, 26, 0, 720905, 26, 0, 720906, 26, 0, 720907, 26, 0, 720908, 26, 0, 720909, 26, 0, 720910, 26, 0, 720911, 26, 0, 720912, 26, 0, 720913, 27, 0, 720914, 26, 0, 720915, 26, 0, 720916, 27, 0, 720918, 27, 0, 720919, 27, 0, 720920, 27, 0, 720921, 27, 0, 720922, 27, 0, 786438, 27, 0, 786439, 27, 0, 786440, 26, 0, 786441, 26, 0, 786442, 26, 0, 786443, 26, 0, 786444, 26, 0, 786445, 26, 0, 786446, 26, 0, 786447, 27, 0, 786448, 26, 0, 786449, 26, 0, 786450, 26, 0, 786451, 26, 0, 786452, 27, 0, 851972, 26, 0, 851975, 26, 0, 851976, 27, 0, 851977, 27, 0, 851978, 27, 0, 851979, 27, 0, 851980, 27, 0, 851981, 27, 0, 851982, 27, 0, 851984, 27, 0, 851985, 27, 0, 851986, 26, 0, 851987, 27, 0, 851988, 27, 0, 851991, 26, 0, 851995, 26, 0, 917515, 26, 0, 917518, 26, 0, 917522, 27, 0, 917524, 26, 0, 983046, 26, 0, 983051, 26, 0, 983063, 26, 0, 1048579, 26, 0, 1114120, 26, 0, 1179666, 26, 0 )
 
-[node name="YSort" type="YSort" parent="."]
+[node name="Mouse" type="YSort" parent="."]
 
-[node name="Troll" parent="YSort" instance=ExtResource( 2 )]
+[node name="Mouse" parent="Mouse" instance=ExtResource( 2 )]
 position = Vector2( 602.819, -39.2876 )
+
+[node name="trees" type="Node2D" parent="Mouse"]
+
+[node name="tree_green_1" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 195, -353 )
+
+[node name="tree_green_6" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 501, -585 )
+
+[node name="tree_green_7" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 301, -677 )
+
+[node name="tree_green_8" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 348, -516 )
+
+[node name="tree_green_9" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 2289, -530 )
+
+[node name="tree_green_10" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 982, -552 )
+
+[node name="tree_green_11" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 1046, -164 )
+
+[node name="tree_green_2" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 1369, 34 )
+
+[node name="tree_green_3" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 2070, -385 )
+
+[node name="tree_green_4" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 820, 922 )
+
+[node name="tree_green_5" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 1917, 888 )
