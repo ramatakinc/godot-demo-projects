@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://tilesets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://player/mouse.tscn" type="PackedScene" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://tilesets/shadow_tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/tile_grass_float_1.png" type="Texture" id=7]
 [ext_resource path="res://decorations/tree_green_1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://decorations/tree_green_2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://decorations/tree_olive_2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://decorations/tree_olive_1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://decorations/tree_red_2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://decorations/tree_red_1.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 3 )
@@ -149,7 +154,7 @@ position = Vector2( -148, -398 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -157,7 +162,7 @@ position = Vector2( -218, -518 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -165,7 +170,7 @@ position = Vector2( -224, -36 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite31" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -173,7 +178,7 @@ position = Vector2( 2464, 484 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite34" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -181,7 +186,7 @@ position = Vector2( 2634, 766 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite38" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -189,7 +194,7 @@ position = Vector2( 1744, 1183 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite39" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -197,7 +202,7 @@ position = Vector2( 2019, 1151 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite41" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -205,6 +210,7 @@ position = Vector2( 1396, 1386 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite43" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -212,7 +218,7 @@ position = Vector2( 806, 1401 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -220,7 +226,7 @@ position = Vector2( 18, 118 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -228,7 +234,7 @@ position = Vector2( -281, 181 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -236,7 +242,7 @@ position = Vector2( -378, 448 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite7" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -244,7 +250,7 @@ position = Vector2( 284, 761 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite56" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -252,6 +258,7 @@ position = Vector2( -496, 686 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite46" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -259,6 +266,7 @@ position = Vector2( 265, 1084 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite49" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -266,6 +274,7 @@ position = Vector2( 508, 1224 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite8" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -273,6 +282,7 @@ position = Vector2( 2305, -109 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite9" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -280,6 +290,7 @@ position = Vector2( 1627, -311 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite10" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -287,7 +298,7 @@ position = Vector2( 1206, -743 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite11" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -295,7 +306,7 @@ position = Vector2( 670, -788 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite12" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -303,7 +314,7 @@ position = Vector2( 1871, -784 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite27" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -311,7 +322,6 @@ position = Vector2( 2464, -304 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -319,7 +329,7 @@ position = Vector2( 101, -784 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite66" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -327,7 +337,6 @@ position = Vector2( 99, -644 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -335,7 +344,6 @@ position = Vector2( -42, -695 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -343,7 +351,6 @@ position = Vector2( 175.6, -893.4 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -351,7 +358,6 @@ position = Vector2( 617, -912 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -359,7 +365,7 @@ position = Vector2( 1181, -924 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite67" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -367,7 +373,7 @@ position = Vector2( 959, -918 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite68" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -375,7 +381,7 @@ position = Vector2( 751, -1056 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite69" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -383,7 +389,7 @@ position = Vector2( 1391, -1064 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -391,7 +397,7 @@ position = Vector2( 1459, -766 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite35" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -399,7 +405,7 @@ position = Vector2( 1726, -955 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -407,7 +413,7 @@ position = Vector2( 1565, -442 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite22" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -415,7 +421,7 @@ position = Vector2( 1409, -456 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite23" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -423,7 +429,7 @@ position = Vector2( 2481, -796 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite24" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -431,7 +437,7 @@ position = Vector2( 2675, -605 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite25" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -439,7 +445,7 @@ position = Vector2( 2267, -949 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite26" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -447,7 +453,7 @@ position = Vector2( 2639, -334 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite28" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -455,7 +461,7 @@ position = Vector2( 2484, -177 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite29" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -463,7 +469,7 @@ position = Vector2( 2545, -65 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite32" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -471,6 +477,7 @@ position = Vector2( 2604, 441 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite33" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -478,7 +485,7 @@ position = Vector2( 2576, 598 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite36" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -486,7 +493,7 @@ position = Vector2( 1795, 1101 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite40" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -494,7 +501,7 @@ position = Vector2( 2104, 1245 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite42" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -502,7 +509,6 @@ position = Vector2( 1481, 1459 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite44" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -510,7 +516,6 @@ position = Vector2( 823, 1525 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite50" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -518,7 +523,7 @@ position = Vector2( 491, 1385 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite51" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -526,7 +531,7 @@ position = Vector2( 272, 1326 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite52" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -534,7 +539,7 @@ position = Vector2( 229, 1462 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite53" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -542,7 +547,7 @@ position = Vector2( 1097, 1485 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite54" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -550,7 +555,7 @@ position = Vector2( 1261, 1559 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite45" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -558,7 +563,6 @@ position = Vector2( 95, 871 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite47" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -566,7 +570,6 @@ position = Vector2( 290, 1168 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 5
 playing = true
 
 [node name="AnimatedSprite55" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -574,7 +577,7 @@ position = Vector2( -224, 790 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite57" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -582,7 +585,7 @@ position = Vector2( -480, 177 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite58" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -590,7 +593,7 @@ position = Vector2( -439, 538 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite59" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -598,7 +601,7 @@ position = Vector2( -476, 370 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite60" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -606,7 +609,7 @@ position = Vector2( -114, -96 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite61" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -614,7 +617,7 @@ position = Vector2( -300, -182 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite62" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -622,7 +625,7 @@ position = Vector2( -317, -374 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite63" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -630,7 +633,7 @@ position = Vector2( -386, 60 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite64" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -638,6 +641,7 @@ position = Vector2( -381, -518 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite65" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -645,6 +649,7 @@ position = Vector2( -129, -866 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite48" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -652,7 +657,7 @@ position = Vector2( 81.0001, 1120 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite37" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -660,7 +665,7 @@ position = Vector2( 1459, 1156 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite30" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -668,6 +673,7 @@ position = Vector2( 2359, 24 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -675,7 +681,7 @@ position = Vector2( 403, -817 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 4
+frame = 7
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="TileMap/FloatingTiles"]
@@ -683,7 +689,7 @@ position = Vector2( -168, -663 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 13 )
 animation = "float"
-frame = 3
+frame = 6
 playing = true
 
 [node name="TileMapShadow2" type="TileMap" parent="."]
@@ -739,16 +745,10 @@ tile_data = PoolIntArray( -851956, 26, 0, -851948, 26, 0, -786428, 26, 0, -78640
 
 [node name="Mouse" type="YSort" parent="."]
 
-[node name="Mouse" parent="Mouse" instance=ExtResource( 2 )]
-position = Vector2( 602.819, -39.2876 )
+[node name="trees" type="YSort" parent="Mouse"]
 
-[node name="trees" type="Node2D" parent="Mouse"]
-
-[node name="tree_green_1" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 195, -353 )
-
-[node name="tree_green_6" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 501, -585 )
+[node name="tree_green_12" parent="Mouse/trees" instance=ExtResource( 8 )]
+position = Vector2( 728, -116 )
 
 [node name="tree_green_7" parent="Mouse/trees" instance=ExtResource( 8 )]
 position = Vector2( 301, -677 )
@@ -757,22 +757,52 @@ position = Vector2( 301, -677 )
 position = Vector2( 348, -516 )
 
 [node name="tree_green_9" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 2289, -530 )
-
-[node name="tree_green_10" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 982, -552 )
-
-[node name="tree_green_11" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 1046, -164 )
+position = Vector2( 340, 218 )
 
 [node name="tree_green_2" parent="Mouse/trees" instance=ExtResource( 8 )]
 position = Vector2( 1369, 34 )
 
-[node name="tree_green_3" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 2070, -385 )
-
-[node name="tree_green_4" parent="Mouse/trees" instance=ExtResource( 8 )]
-position = Vector2( 820, 922 )
-
 [node name="tree_green_5" parent="Mouse/trees" instance=ExtResource( 8 )]
 position = Vector2( 1917, 888 )
+
+[node name="tree_green_15" parent="Mouse/trees" instance=ExtResource( 9 )]
+position = Vector2( 1025, -142 )
+
+[node name="tree_green_16" parent="Mouse/trees" instance=ExtResource( 9 )]
+position = Vector2( 1998, -395 )
+
+[node name="tree_olive_1" parent="Mouse/trees" instance=ExtResource( 11 )]
+position = Vector2( 169, -374 )
+
+[node name="tree_olive_6" parent="Mouse/trees" instance=ExtResource( 11 )]
+position = Vector2( 1795, -115 )
+
+[node name="tree_olive_2" parent="Mouse/trees" instance=ExtResource( 10 )]
+position = Vector2( -152, 433 )
+
+[node name="tree_olive_5" parent="Mouse/trees" instance=ExtResource( 10 )]
+position = Vector2( 1473, -119 )
+
+[node name="tree_olive_4" parent="Mouse/trees" instance=ExtResource( 10 )]
+position = Vector2( 491, -608 )
+
+[node name="tree_olive_3" parent="Mouse/trees" instance=ExtResource( 10 )]
+position = Vector2( 996, -522 )
+
+[node name="tree_red_1" parent="Mouse/trees" instance=ExtResource( 13 )]
+position = Vector2( 2083, 168 )
+
+[node name="tree_red_3" parent="Mouse/trees" instance=ExtResource( 13 )]
+position = Vector2( 2302, -539 )
+
+[node name="tree_red_2" parent="Mouse/trees" instance=ExtResource( 12 )]
+position = Vector2( 816, 939 )
+
+[node name="tree_red_5" parent="Mouse/trees" instance=ExtResource( 12 )]
+position = Vector2( 418, 363 )
+
+[node name="tree_red_4" parent="Mouse/trees" instance=ExtResource( 12 )]
+position = Vector2( 1570, -15 )
+
+[node name="Mouse" parent="Mouse" instance=ExtResource( 2 )]
+position = Vector2( 602.819, -39.2876 )
